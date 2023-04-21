@@ -1,0 +1,16 @@
+body{
+    margin:0%;
+    padding: 0%;
+    background-color: darkblue;
+}
+
+div{
+    margin-left: 200px;
+    margin-top: 200px;
+}
+div p{
+    color: white;
+    font-size: 9vw;
+     font-family:  Courier ;
+     text-transform: uppercase;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="thermometer.css">
+  <title>Document</title>
+</head>
+<body>
+  <div><p id="c">
+    I AM <br>thermometer  <span id="ch"></span>
+  </p></div>
+  <script>
+   let tempEl = document.getElementById('ch');
+
+const temp = () => {
+  tempEl.innerHTML = '<i class="fa fa-thermometer-empty" aria-hidden="true"></i>';
+
+  setTimeout(() => {
+    tempEl.innerHTML = '<i class="fa fa-thermometer-quarter" aria-hidden="true"></i>';
+    tempEl.style.color='yellow'
+  }, 1000);
+
+  setTimeout(() => {
+    tempEl.innerHTML = '<i class="fa fa-thermometer-half" aria-hidden="true"></i>';
+    tempEl.style.color='green'
+  }, 2000);
+
+  setTimeout(() => {
+    tempEl.innerHTML = '<i class="fa fa-thermometer-full" aria-hidden="true"></i>';
+    tempEl.style.color='red'
+  }, 3000);
+
+  // Reset temperature to "empty" after 4 seconds
+  setTimeout(() => {
+    tempEl.innerHTML = '<i class="fa fa-thermometer-empty" aria-hidden="true"></i>';
+    tempEl.style.color='white'
+  }, 4000);
+}
+
+// Call temp function every 4 seconds
+setInterval(temp, 4000);
+
+  </script>
+</body>
+</html>
